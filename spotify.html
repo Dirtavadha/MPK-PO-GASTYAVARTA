@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gastyavarta 2026 — Spotify</title>
+<style>
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+
+  .qr-frame {
+    width: 250px;
+    height: 250px;
+    border: 4px dashed #fff;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .qr-frame img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .qr-frame:hover {
+    transform: scale(1.05);
+  }
+
+  /* Tombol kembali ke letter */
+  .back-button {
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background: #c84b42;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .back-button:hover {
+    background: #d47373;
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+
+<h1>Scan Here</h1>
+
+<div class="qr-frame">
+  <!-- Ganti src dengan QR code Spotify yang sesungguhnya -->
+  <img src="qrspotify.jpg" alt="QR Spotify">
+</div>
+
+<button class="back-button" onclick="window.location.href='page.html'">Back to Letter</button>
+
+</body>
+</html>

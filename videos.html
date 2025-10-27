@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Kesan dan Pesan — Gastyavarta 2026</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Layer semi-transparan supaya teks terbaca */
+  .content-wrapper {
+    background: rgba(0,0,0,0.4);
+    padding: 25px 30px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  }
+
+  img.logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  }
+
+  p.description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-align: justify;
+    text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  }
+
+  .video-link {
+    background: #4975a4;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-bottom: 25px;
+    display: inline-block;
+  }
+
+  .video-link:hover {
+    background: #568bc8;
+    transform: translateY(-2px);
+  }
+
+  .back-button {
+    background: #c84b42;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .back-button:hover {
+    background: #d47373;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 480px) {
+    img.logo { width: 100px; }
+    p.description { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- Logo Angkatan -->
+    <img src="LOGO.png" alt="Logo Gastyavarta" class="logo">
+
+    <h1>Video Kesan dan Pesan</h1>
+
+    <p class="description">
+      Berikut adalah video kesan dan pesan dari adik-adik MPK/PO Angkatan Dirtavadha untuk kakak-kakak Gastyavarta 2026. Semoga dapat menjadi kenangan yang berkesan dan memberikan inspirasi untuk perjalanan selanjutnya.
+    </p>
+
+    <!-- Link Video -->
+    <a href="https://drive.google.com/your-video-link" target="_blank" class="video-link">
+      Lihat Video di Google Drive
+    </a>
+
+    <!-- Tombol Kembali -->
+    <button class="back-button" onclick="window.location.href='page.html'">Kembali ke Letter</button>
+  </div>
+</body>
+</html>

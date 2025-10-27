@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Kakak Bidang — Gastyavarta 2026</title>
+<style>
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: url('background.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+  }
+
+  /* Layer semi-transparan supaya teks dan foto terbaca */
+  .content-wrapper {
+    background: rgba(0,0,0,0.4);
+    padding: 25px 30px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    text-align: center;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  }
+
+  /* Grid Foto Polaroid */
+  .photo-grid {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  .polaroid {
+    background: #fff;
+    padding: 10px 10px 30px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    transform: rotate(-2deg) translateY(30px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    width: 180px;
+  }
+
+  .polaroid.show {
+    transform: rotate(-2deg) translateY(0);
+    opacity: 1;
+  }
+
+  .polaroid:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  .polaroid img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  /* Kesan & Pesan */
+  .message-box {
+    max-width: 600px;
+    background: #fffaf3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+  }
+
+  .message-box.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Tombol Kembali */
+  .back-button {
+    background: #c84b42;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .back-button:hover {
+    background: #d47373;
+    transform: translateY(-2px);
+  }
+
+  /* Responsif */
+  @media (max-width: 480px) {
+    .polaroid { width: 140px; }
+    .message-box { padding: 15px; }
+  }
+</style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <h1>About Kakak Bidang</h1>
+
+    <!-- Foto Polaroid -->
+    <div class="photo-grid">
+      <div class="polaroid"><img src="Sampel Person.jpg" alt="Foto 1"></div>
+      <div class="polaroid"><img src="Sampel Person.jpg" alt="Foto 2"></div>
+      <div class="polaroid"><img src="Sampel Person.jpg" alt="Foto 3"></div>
+      <div class="polaroid"><img src="Sampel Person.jpg" alt="Foto 4"></div>
+    </div>
+
+    <!-- Kesan dan Pesan -->
+    <div class="message-box">
+      <p>
+        Dear Kak X, <br><br>
+        Terima kasih banyak kepada kakak bidang atas bimbingan, kesabaran, dan semangat yang selalu diberikan. Setiap momen bersama kalian menjadi pengalaman berharga yang tidak akan kami lupakan. Semoga kakak-kakak selalu sehat dan sukses dalam setiap langkah. Kami akan selalu mengingat dan menerapkan semua ilmu dan teladan yang telah kalian tunjukkan.<br><br>
+        Salam hangat, X
+      </p>
+    </div>
+
+    <!-- Tombol Kembali -->
+    <button class="back-button" onclick="window.location.href='page.html'">Kembali ke Letter</button>
+  </div>
+
+  <script>
+    const polaroids = document.querySelectorAll('.polaroid');
+    const messageBox = document.querySelector('.message-box');
+
+    // Fungsi tampilkan polaroid satu per satu
+    polaroids.forEach((p, i) => {
+      setTimeout(() => { p.classList.add('show'); }, i * 300);
+    });
+
+    // Tampilkan message setelah semua foto muncul
+    setTimeout(() => {
+      messageBox.classList.add('show');
+    }, polaroids.length * 300 + 200);
+  </script>
+</body>
+</html>
